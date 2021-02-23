@@ -1,8 +1,11 @@
 // src/electron.js
 
 const { app, BrowserWindow } = require("electron");
+const getPort = 3000;
 const path = require("path");
 const server = require('./js-server')
+
+server.default(getPort)
 
 let mainWindow;
 

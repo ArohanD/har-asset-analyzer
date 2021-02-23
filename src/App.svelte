@@ -4,6 +4,10 @@
 	const launchPuppeteer = () => {
 		console.log('flare')
 	}
+
+	const talkToServer = () => {
+		
+	}
 </script>
 
 <main>
@@ -11,6 +15,7 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 
 	<button on:click={launchPuppeteer}>Launch Puppeteer</button>
+	<button on:click={talkToServer}>Talk to Server</button>
 </main>
 
 <style>
