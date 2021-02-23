@@ -1,5 +1,8 @@
+client/node_modules/
+server/node_modules/
 /node_modules/
-/public/build/
+client/public/build/
+server/dist
 js-server
 
 .DS_Store

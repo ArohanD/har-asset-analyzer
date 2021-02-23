@@ -1,0 +1,38 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "svelte:dev": "rollup -c -w",
+    "validate": "svelte-check",
+    "start": "sirv public",
+    "start:svelte": "sirv public",
+    "start:electron": "electron .",
+    "delay": "node ./node_modules/npm-delay 2000",
+    "electron:delay": "run-s delay start:electron",
+    "dev": "run-p svelte:dev electron:delay dev:server",
+    "dev:server": "tsc -w --preserveWatchOutput server/*.ts --outDir js-server"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "@tsconfig/svelte": "^1.0.0",
+    "@types/node": "^14.14.31",
+    "npm-delay": "^1.0.4",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "svelte-check": "^1.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "tslib": "^2.0.0",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "sirv-cli": "^1.0.0"
+  }
+}
