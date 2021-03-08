@@ -6,3 +6,4 @@ server/dist
 js-server
 
 .DS_Store
+data/
