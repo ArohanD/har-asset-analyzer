@@ -1,7 +1,8 @@
 import { getSingleReading } from './functions/getSingleReading'
 
-import express from 'express'
+import express, { request, response } from 'express'
 import { pathFinder } from './utils/urls';
+import { timeout } from './utils/timeout';
 const app = express();
 const path = require('path');
 const port = 3000;
@@ -20,7 +21,14 @@ app.get('/test', async (request, response) => {
     await getSingleReading(url as string, saveDirectory)
   }
   
-  response.send('test')
+  response.send('test complete')
+})
+
+app.get('/getAssets', async (request, response) => {
+  console.log(`request for assets from ${request.query.url}`)
+  await timeout(3000)
+  response.send('placeholder string')
+
 })
 
 // Add new routes above
